@@ -18,5 +18,6 @@ public class SystemSetting : ISystemSettingService
     public Task AddAsync(Models.SystemSetting systemSetting)
     {
         throw new NotImplementedException();
+        
     }
 }
