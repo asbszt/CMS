@@ -4,7 +4,6 @@ namespace Cms.Library.Models;
 
 public class CustomerInfo
 {
-    [PrimaryKey ,AutoIncrement]
     public Guid Id { get; set; }
     public string CustomerId { get; set; }
     public string CardNo { get; set; }

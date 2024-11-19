@@ -13,5 +13,5 @@ public class CustomerRetailFlow
     public decimal ItemTotalAmount { get; set; }
     public decimal DiscountAmount { get; set; }
     public decimal ActualAmount { get; set; }
-    
+    public CustomerRetailMaster RetailMaster { get; set; }
 }
