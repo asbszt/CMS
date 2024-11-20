@@ -19,9 +19,9 @@ public class SystemSettingService : ISystemSettingService
         return await _context.SystemSettings.ToListAsync();
     }
 
-    public Task<List<SystemSetting>> GetAllByNameAsync(string name)
+    public async Task<List<SystemSetting>> GetAllByNameAsync(string name)
     {
-        throw new NotImplementedException();
+        return await _context.SystemSettings.Where(s => s.Name == name).ToListAsync();
     }
 
     public Task AddAsync(SystemSetting systemSetting)
