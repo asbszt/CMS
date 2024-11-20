@@ -1,13 +1,22 @@
+using Cms.Library.Helper;
 using Cms.Library.IServices;
 using Cms.Library.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Cms.Library.Services;
 
 public class SystemSettingService : ISystemSettingService
 {
-    public Task<List<SystemSetting>> GetAllAsync()
+    private readonly CmsDbContext _context;
+
+    public SystemSettingService(CmsDbContext context)
     {
-        throw new NotImplementedException();
+        _context = context;
+    }
+
+    public async Task<List<SystemSetting>> GetAllAsync()
+    {
+        return await _context.SystemSettings.ToListAsync();
     }
 
     public Task<List<SystemSetting>> GetAllByNameAsync(string name)
