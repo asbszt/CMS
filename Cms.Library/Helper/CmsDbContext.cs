@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Cms.Library.Helper;
 
-public class CmsDbContext:DbContext
+public class CmsDbContext : DbContext
 {
     public DbSet<CustomerRetailFlow> CustomerRetailFlows { get; set; }
     public DbSet<CustomerInfo> CustomerInfos { get; set; }
@@ -12,6 +12,8 @@ public class CmsDbContext:DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-       // optionsBuilder.UseMySql("Data Source=localhost;Port=3306;User Id=root;Password=123456;",);
+        optionsBuilder.UseMySql(
+            "Data Source=127.0.0.1;Port=3306;database = SCM;User Id=root;Password=asbszt@123;SslMode=None;Pooling=true",
+            new MySqlServerVersion(new Version(5, 7, 44)));
     }
 }
