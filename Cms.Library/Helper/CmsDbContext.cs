@@ -5,9 +5,11 @@ namespace Cms.Library.Helper;
 
 public class CmsDbContext : DbContext
 {
-    public DbSet<CustomerRetailFlow> CustomerRetailFlows { get; set; }
-    public DbSet<CustomerInfo> CustomerInfos { get; set; }
-    public DbSet<CustomerRetailMaster> CustomerRetailMasters { get; set; }
+    public DbSet<CustomerRetailFlow> CustomerRetailFlow { get; set; }
+    public DbSet<CustomerInfo> CustomerInfo { get; set; }
+    public DbSet<CustomerRetailMaster> CustomerRetailMaster { get; set; }
+    public DbSet<ItemCls> ItemCls { get; set; }
+    public DbSet<ItemInfo> ItemInfo { get; set; }
     public DbSet<SystemSetting> SystemSettings { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

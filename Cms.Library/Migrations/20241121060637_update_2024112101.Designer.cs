@@ -4,6 +4,7 @@ using Cms.Library.Helper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cms.Library.Migrations
 {
     [DbContext(typeof(CmsDbContext))]
-    partial class CmsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241121060637_update_2024112101")]
+    partial class update_2024112101
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -68,7 +71,7 @@ namespace Cms.Library.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CustomerInfo");
+                    b.ToTable("CustomerInfos");
                 });
 
             modelBuilder.Entity("Cms.Library.Models.CustomerRetailFlow", b =>
@@ -118,7 +121,7 @@ namespace Cms.Library.Migrations
 
                     b.HasIndex("RetailMasterId");
 
-                    b.ToTable("CustomerRetailFlow");
+                    b.ToTable("CustomerRetailFlows");
                 });
 
             modelBuilder.Entity("Cms.Library.Models.CustomerRetailMaster", b =>
@@ -154,7 +157,7 @@ namespace Cms.Library.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CustomerRetailMaster");
+                    b.ToTable("CustomerRetailMasters");
                 });
 
             modelBuilder.Entity("Cms.Library.Models.ItemCls", b =>
@@ -180,7 +183,7 @@ namespace Cms.Library.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ItemCls");
+                    b.ToTable("ItemClss");
                 });
 
             modelBuilder.Entity("Cms.Library.Models.ItemInfo", b =>
@@ -218,7 +221,7 @@ namespace Cms.Library.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ItemInfo");
+                    b.ToTable("ItemInfos");
                 });
 
             modelBuilder.Entity("Cms.Library.Models.SystemSetting", b =>

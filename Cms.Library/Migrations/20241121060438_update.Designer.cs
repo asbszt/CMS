@@ -4,6 +4,7 @@ using Cms.Library.Helper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cms.Library.Migrations
 {
     [DbContext(typeof(CmsDbContext))]
-    partial class CmsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241121060438_update")]
+    partial class update
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -68,7 +71,7 @@ namespace Cms.Library.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CustomerInfo");
+                    b.ToTable("CustomerInfos");
                 });
 
             modelBuilder.Entity("Cms.Library.Models.CustomerRetailFlow", b =>
@@ -118,7 +121,7 @@ namespace Cms.Library.Migrations
 
                     b.HasIndex("RetailMasterId");
 
-                    b.ToTable("CustomerRetailFlow");
+                    b.ToTable("CustomerRetailFlows");
                 });
 
             modelBuilder.Entity("Cms.Library.Models.CustomerRetailMaster", b =>
@@ -154,71 +157,7 @@ namespace Cms.Library.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CustomerRetailMaster");
-                });
-
-            modelBuilder.Entity("Cms.Library.Models.ItemCls", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("char(36)");
-
-                    b.Property<string>("ItemClsCategory")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("ItemClsDescription")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("ItemClsId")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("ItemClsName")
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("ItemClsType")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ItemCls");
-                });
-
-            modelBuilder.Entity("Cms.Library.Models.ItemInfo", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("char(36)");
-
-                    b.Property<string>("ItemBarcode")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("ItemClsId")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("ItemClsName")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("ItemId")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("ItemName")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("ItemPrice")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("ItemUnit")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("SupplierId")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("SupplierName")
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ItemInfo");
+                    b.ToTable("CustomerRetailMasters");
                 });
 
             modelBuilder.Entity("Cms.Library.Models.SystemSetting", b =>
