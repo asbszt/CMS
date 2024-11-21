@@ -1,11 +1,11 @@
 using Cms.Library.Models;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace Cms.Library.IServices;
 
-public partial interface ISystemSettingService
+public interface ISystemSettingService
 {
     Task<List<SystemSetting>> GetAllAsync();
     Task<List<SystemSetting>> GetAllByNameAsync(string name);
-    Task AddAsync(SystemSetting systemSetting);
-    
+    EntityEntry<SystemSetting> UpdateAsync(SystemSetting systemSetting);
 }

@@ -2,6 +2,7 @@ using Cms.Library.Helper;
 using Cms.Library.IServices;
 using Cms.Library.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace Cms.Library.Services;
 
@@ -24,8 +25,8 @@ public class SystemSettingService : ISystemSettingService
         return await _context.SystemSettings.Where(s => s.Name == name).ToListAsync();
     }
 
-    public Task AddAsync(SystemSetting systemSetting)
+    public EntityEntry<SystemSetting> UpdateAsync(SystemSetting systemSetting)
     {
-        throw new NotImplementedException();
+        return  _context.SystemSettings.Update(systemSetting);
     }
 }
