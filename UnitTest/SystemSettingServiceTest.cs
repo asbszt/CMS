@@ -3,8 +3,13 @@ using Cms.Library.Services;
 
 namespace UnitTest;
 
-public class SystemSettingServiceTest
+public class SystemSettingServiceTest : IDisposable
 {
+    public void Dispose()
+    {
+        throw new NotImplementedException();
+    }
+
     [Fact]
     public void GetAllAsync_Sucess()
     {
