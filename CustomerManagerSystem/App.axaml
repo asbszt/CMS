@@ -3,6 +3,8 @@
              x:Class="CustomerManagerSystem.App"
              xmlns:local="using:CustomerManagerSystem"
              xmlns:semi="https://irihi.tech/semi"
+             xmlns:i="using:Avalonia.Xaml.Interactivity"
+             xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
              RequestedThemeVariant="Default">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
