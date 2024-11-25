@@ -113,31 +113,39 @@
           "dependencies": {
             "Avalonia": {
               "target": "Package",
-              "version": "[11.1.0, )"
+              "version": "[11.2.1, )"
             },
             "Avalonia.Desktop": {
               "target": "Package",
-              "version": "[11.1.0, )"
+              "version": "[11.2.1, )"
             },
             "Avalonia.Diagnostics": {
               "target": "Package",
-              "version": "[11.1.0, )"
+              "version": "[11.2.1, )"
             },
             "Avalonia.Fonts.Inter": {
               "target": "Package",
-              "version": "[11.1.0, )"
+              "version": "[11.2.1, )"
             },
             "Avalonia.Themes.Fluent": {
               "target": "Package",
-              "version": "[11.1.0, )"
+              "version": "[11.2.1, )"
             },
             "Avalonia.Xaml.Behaviors": {
               "target": "Package",
-              "version": "[11.1.0, )"
+              "version": "[11.2.0.1, )"
             },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.1, )"
+            },
+            "Irihi.Ursa": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
+            "Irihi.Ursa.Themes.Semi": {
+              "target": "Package",
+              "version": "[1.6.0.2, )"
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
@@ -145,7 +153,7 @@
             },
             "Semi.Avalonia": {
               "target": "Package",
-              "version": "[11.1.0.4, )"
+              "version": "[11.2.1, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",

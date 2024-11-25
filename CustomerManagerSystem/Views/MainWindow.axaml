@@ -3,20 +3,15 @@
         xmlns:vm="using:CustomerManagerSystem.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:i="using:Avalonia.Xaml.Interactivity"
-        xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="CustomerManagerSystem.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="CustomerManagerSystem">
+        Title="CustomerManagerSystem"
+        DataContext="{Binding MainWindowViewModel,Source={StaticResource ServiceLocator}}">
 
     <!--通过行为关联时间来绑定命令-->
-    <i:Interaction.Behaviors>
-        <ia:EventTriggerBehavior EventName="Initialized">
-            <ia:InvokeCommandAction Command="{Binding}" />
-        </ia:EventTriggerBehavior>
-    </i:Interaction.Behaviors>
 
-    <Button Content="Click Me!" />
+
+    <Button Content="Click Me!" Command="{Binding Alert}" />
 </Window>
