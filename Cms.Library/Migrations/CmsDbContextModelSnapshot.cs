@@ -164,16 +164,20 @@ namespace Cms.Library.Migrations
                         .HasColumnType("char(36)");
 
                     b.Property<string>("ItemClsCategory")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("ItemClsDescription")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar(200)");
 
                     b.Property<string>("ItemClsId")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("ItemClsName")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<int>("ItemClsType")
                         .HasColumnType("int");
@@ -190,35 +194,66 @@ namespace Cms.Library.Migrations
                         .HasColumnType("char(36)");
 
                     b.Property<string>("ItemBarcode")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("ItemClsId")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(20)
+                        .HasColumnType("varchar(20)");
 
                     b.Property<string>("ItemClsName")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<string>("ItemId")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("ItemName")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(300)
+                        .HasColumnType("varchar(300)");
 
-                    b.Property<string>("ItemPrice")
-                        .HasColumnType("longtext");
+                    b.Property<decimal>("ItemPrice")
+                        .HasColumnType("decimal(65,30)");
 
                     b.Property<string>("ItemUnit")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(20)
+                        .HasColumnType("varchar(20)");
 
                     b.Property<string>("SupplierId")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("SupplierName")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar(200)");
 
                     b.HasKey("Id");
 
                     b.ToTable("ItemInfo");
+                });
+
+            modelBuilder.Entity("Cms.Library.Models.Operator", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<string>("OperDescription")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("OperGroup")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("OperId")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("OperName")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Operator");
                 });
 
             modelBuilder.Entity("Cms.Library.Models.SystemSetting", b =>
@@ -241,7 +276,7 @@ namespace Cms.Library.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SystemSettings");
+                    b.ToTable("SystemSetting");
                 });
 
             modelBuilder.Entity("Cms.Library.Models.CustomerRetailFlow", b =>

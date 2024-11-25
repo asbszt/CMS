@@ -6,5 +6,5 @@ public interface ISystemSettingService
 {
     Task<List<SystemSetting>> GetAllAsync();
     Task<List<SystemSetting>> GetAllByNameAsync(string name);
-    void UpdateAsync(SystemSetting systemSetting);
+    Task UpdateAsync(SystemSetting systemSetting);
 }

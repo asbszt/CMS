@@ -10,7 +10,7 @@ public class CmsDbContext : DbContext
     public DbSet<CustomerRetailMaster> CustomerRetailMaster { get; set; }
     public DbSet<ItemCls> ItemCls { get; set; }
     public DbSet<ItemInfo> ItemInfo { get; set; }
-    public DbSet<SystemSetting> SystemSettings { get; set; }
+    public DbSet<SystemSetting> SystemSetting { get; set; }
     public DbSet<Operator> Operator { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

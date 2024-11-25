@@ -16,16 +16,17 @@ public class SystemSettingService : ISystemSettingService
 
     public async Task<List<SystemSetting>> GetAllAsync()
     {
-        return await _context.SystemSettings.ToListAsync();
+        return await _context.SystemSetting.ToListAsync();
     }
 
     public async Task<List<SystemSetting>> GetAllByNameAsync(string name)
     {
-        return await _context.SystemSettings.Where(s => s.Name == name).ToListAsync();
+        return await _context.SystemSetting.Where(s => s.Name == name).ToListAsync();
     }
 
-    public void UpdateAsync(SystemSetting systemSetting)
+    public async Task UpdateAsync(SystemSetting systemSetting)
     {
-        _context.SystemSettings.Update(systemSetting);
+        _context.SystemSetting.Update(systemSetting);
+        await _context.SaveChangesAsync();
     }
 }

@@ -10,18 +10,13 @@
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="CustomerManagerSystem">
-    
+
     <!--通过行为关联时间来绑定命令-->
     <i:Interaction.Behaviors>
         <ia:EventTriggerBehavior EventName="Initialized">
-            <ia:InvokeCommandAction Command="{Binding}"></ia:InvokeCommandAction>
+            <ia:InvokeCommandAction Command="{Binding}" />
         </ia:EventTriggerBehavior>
     </i:Interaction.Behaviors>
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
 
-<Button Content="Click Me!"></Button>
+    <Button Content="Click Me!" />
 </Window>
