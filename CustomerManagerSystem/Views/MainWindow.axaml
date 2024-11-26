@@ -13,5 +13,5 @@
     <!--通过行为关联时间来绑定命令-->
 
 
-    <Button Content="Click Me!" Command="{Binding Alert}" />
+    <Button Content="Click Me!" Command="{Binding AlertCommandAsync}" />
 </Window>

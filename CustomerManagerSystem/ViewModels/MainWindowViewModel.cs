@@ -1,4 +1,5 @@
-﻿using Cms.Library.IServices;
+﻿using System.Threading.Tasks;
+using Cms.Library.IServices;
 
 namespace CustomerManagerSystem.ViewModels;
 
@@ -11,8 +12,8 @@ public class MainWindowViewModel : ViewModelBase
         _alertService = alertService;
     }
 
-    public void Alert()
+    public async Task AlertCommandAsync()
     {
-        _alertService.AlertAsync("Info", "Message!");
+        await _alertService.AlertAsync("Info", "Message!");
     }
 }
