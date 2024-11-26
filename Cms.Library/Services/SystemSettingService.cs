@@ -5,28 +5,21 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Cms.Library.Services;
 
-public class SystemSettingService : ISystemSettingService
+public class SystemSettingService(CmsDbContext context) : ISystemSettingService
 {
-    private readonly CmsDbContext _context;
-
-    public SystemSettingService(CmsDbContext context)
-    {
-        _context = context;
-    }
-
     public async Task<List<SystemSetting>> GetAllAsync()
     {
-        return await _context.SystemSetting.ToListAsync();
+        return await context.SystemSetting.ToListAsync();
     }
 
     public async Task<List<SystemSetting>> GetAllByNameAsync(string name)
     {
-        return await _context.SystemSetting.Where(s => s.Name == name).ToListAsync();
+        return await context.SystemSetting.Where(s => s.Name == name).ToListAsync();
     }
 
     public async Task UpdateAsync(SystemSetting systemSetting)
     {
-        _context.SystemSetting.Update(systemSetting);
-        await _context.SaveChangesAsync();
+        context.SystemSetting.Update(systemSetting);
+        await context.SaveChangesAsync();
     }
 }
