@@ -1,7 +1,7 @@
 using System;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using CustomerManagerSystem.ViewModels;
+using Cms.Library.ViewModels;
 
 namespace CustomerManagerSystem;
 

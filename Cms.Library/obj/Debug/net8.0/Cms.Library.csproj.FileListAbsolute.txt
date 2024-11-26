@@ -16,3 +16,6 @@
 /home/asbszt/RiderProjects/CustomerManagerSystem/Cms.Library/obj/Debug/net8.0/Cms.Library.pdb
 /home/asbszt/RiderProjects/CustomerManagerSystem/Cms.Library/obj/Debug/net8.0/Cms.Library.genruntimeconfig.cache
 /home/asbszt/RiderProjects/CustomerManagerSystem/Cms.Library/obj/Debug/net8.0/ref/Cms.Library.dll
+/home/asbszt/RiderProjects/CustomerManagerSystem/Cms.Library/bin/Debug/net8.0/CommunityToolkit.Mvvm.dll
+/home/asbszt/RiderProjects/CustomerManagerSystem/Cms.Library/bin/Debug/net8.0/CommunityToolkit.Mvvm.pdb
+/home/asbszt/RiderProjects/CustomerManagerSystem/Cms.Library/bin/Debug/net8.0/CommunityToolkit.Mvvm.xml

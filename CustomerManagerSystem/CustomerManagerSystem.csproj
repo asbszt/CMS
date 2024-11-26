@@ -31,4 +31,8 @@
     <ItemGroup>
         <ProjectReference Include="..\Cms.Library\Cms.Library.csproj"/>
     </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="ViewModels\"/>
+    </ItemGroup>
 </Project>

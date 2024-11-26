@@ -7,6 +7,9 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Reference Include="CommunityToolkit.Mvvm">
+            <HintPath>..\..\..\.nuget\packages\communitytoolkit.mvvm\8.2.1\lib\net6.0\CommunityToolkit.Mvvm.dll</HintPath>
+        </Reference>
         <Reference Include="SQLite-net">
             <HintPath>..\..\..\.nuget\packages\sqlite-net-pcl\1.9.172\lib\netstandard2.0\SQLite-net.dll</HintPath>
         </Reference>

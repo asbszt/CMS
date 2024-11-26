@@ -12,7 +12,6 @@
         </Grid.RowDefinitions>
         <StackPanel>
             <Button Classes="Small" />
-
         </StackPanel>
     </Grid>
 </Window>

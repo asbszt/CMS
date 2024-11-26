@@ -1,8 +1,8 @@
 using System;
 using Cms.Library.IServices;
 using Cms.Library.Services;
+using Cms.Library.ViewModels;
 using CustomerManagerSystem.Services;
-using CustomerManagerSystem.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace CustomerManagerSystem;
