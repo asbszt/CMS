@@ -4,7 +4,7 @@ using Avalonia.Markup.Xaml;
 
 namespace CustomerManagerSystem.Views;
 
-public partial class Setting : Window
+public partial class Setting : UserControl
 {
     public Setting()
     {

@@ -18,13 +18,14 @@ public class ServiceLocator
     {
         var serviceCollection = new ServiceCollection();
         serviceCollection.AddSingleton<MainWindowViewModel>();
+        serviceCollection.AddSingleton<SettingViewModel>();
         serviceCollection.AddSingleton<ISystemSettingService, SystemSettingService>();
         serviceCollection.AddSingleton<IAlertService, AlertService>();
         _serviceProvider = serviceCollection.BuildServiceProvider(); //注册服务给代理服务
     }
 
     /// <summary>
-    /// 提供业务端使用ServiceLocator
+    ///     提供业务端使用ServiceLocator
     /// </summary>
     /// <exception cref="NullReferenceException"></exception>
     public static ServiceLocator Current
@@ -41,4 +42,5 @@ public class ServiceLocator
     }
 
     public MainWindowViewModel MainWindowViewModel => _serviceProvider.GetService<MainWindowViewModel>();
+    public SettingViewModel SettingViewModel => _serviceProvider.GetService<SettingViewModel>();
 }
