@@ -5,7 +5,7 @@
         xmlns:viewModels="clr-namespace:Cms.Library.ViewModels;assembly=Cms.Library"
         xmlns:i="using:Avalonia.Xaml.Interactivity"
         xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="600"
         x:Class="CustomerManagerSystem.Views.MainWindow"
         x:DataType="viewModels:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
@@ -19,12 +19,18 @@
             <ia:InvokeCommandAction Command="{Binding}" />
         </ia:EventTriggerBehavior>
     </i:Interaction.Behaviors>
-    <Grid ColumnDefinitions="200,*" Background="{DynamicResource PrimaryBackGrand}">
-        <Border Padding="20">
+    <Grid ColumnDefinitions="Auto,*" Background="{DynamicResource PrimaryBackgrand}">
+        <Border Padding="20" Background="{DynamicResource PrimaryBackgrandGradient}">
             <Grid RowDefinitions="*,Auto">
-                <StackPanel>
-                    <Svg Path="/Assets/logo.svg" Width="100"></Svg>
+                <StackPanel Spacing="12">
+                    <Svg Path="/Assets/title.svg" Width="200"></Svg>
+                    <Button Content="首页" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch"></Button>
+                    <Button Content="客户资料" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch"></Button>
+                    <Button Content="商品资料" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch"></Button>
+                    <Button Content="基础业务" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch"></Button>
+                    <Button Content="数据中心" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch"></Button>
                 </StackPanel>
+                <Button Grid.Row="1" Foreground="White" Background="LightBlue" ></Button>
             </Grid>
         </Border>
     </Grid>

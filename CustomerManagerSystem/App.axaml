@@ -11,7 +11,11 @@
         <ResourceDictionary>
             <local:ServiceLocator x:Key="ServiceLocator" />
         </ResourceDictionary>
-        <SolidColorBrush x:Key="PrimaryBackGrand">#14172D</SolidColorBrush>
+        <SolidColorBrush x:Key="PrimaryBackgrand">#14172D</SolidColorBrush>
+        <LinearGradientBrush x:Key="PrimaryBackgrandGradient" StartPoint="0%,0%" EndPoint="100%,0%">
+            <GradientStop Offset="0" Color="#111214"></GradientStop>
+            <GradientStop Offset="1" Color="#151E3E"></GradientStop>
+        </LinearGradientBrush>
     </Application.Resources>
     
     <Application.DataTemplates>
