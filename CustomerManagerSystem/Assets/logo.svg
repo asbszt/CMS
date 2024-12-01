@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32"
+   height="32"
+   viewBox="0 0 32 32"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="新建文档 1.2024_12_01_23_39_42.0.svg"
+   inkscape:version="1.4 (1:1.4+202410161351+e7c3feb100)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="22.46875"
+     inkscape:cx="16"
+     inkscape:cy="16"
+     inkscape:window-width="1920"
+     inkscape:window-height="942"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient8"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#800080;stop-opacity:1;"
+         offset="0"
+         id="stop8" />
+      <stop
+         style="stop-color:#27efe2;stop-opacity:0.71647137;"
+         offset="1"
+         id="stop9" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#800080;stop-opacity:1;"
+         offset="0"
+         id="stop5" />
+      <stop
+         style="stop-color:#00ffff;stop-opacity:1"
+         offset="1"
+         id="stop6" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#800080;stop-opacity:1;"
+         offset="0"
+         id="stop3" />
+      <stop
+         style="stop-color:#00ffff;stop-opacity:1"
+         offset="1"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3"
+       id="linearGradient4"
+       x1="27.059805"
+       y1="23.81085"
+       x2="7.8776097"
+       y2="13.396383"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5"
+       id="linearGradient6"
+       x1="12.639776"
+       y1="9.3018084"
+       x2="14.063978"
+       y2="21.630041"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient8"
+       id="linearGradient9"
+       x1="19.805285"
+       y1="23.276773"
+       x2="15.933241"
+       y2="15.977747"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="图层 2"
+     style="display:inline" />
+  <path
+     d="m 10.634766,17.185547 -2.3964847,0.65039 A 8,8 0 0 0 16,24 a 8,8 0 0 0 8,-8 8,8 0 0 0 0,-0.02148 H 21.5 A 5.5,5.5 0 0 1 21.5,16 5.5,5.5 0 0 1 16,21.5 5.5,5.5 0 0 1 10.634766,17.185547 Z"
+     style="display:inline;fill:url(#linearGradient9);stroke-width:2.87664;fill-opacity:1"
+     id="path3" />
+  <path
+     d="M 4.515625,16.201172 H 7.0175781 A 9,9 0 0 1 7,16 9,9 0 0 1 7.1328125,14.474609 l -0.017578,-0.06836 0.03125,-0.0078 A 9,9 0 0 1 16,7 a 9,9 0 0 1 9,9 9,9 0 0 1 -4.810547,7.939453 l 1.316406,2.130859 A 11.5,11.5 0 0 0 27.5,16 11.5,11.5 0 0 0 16,4.5 11.5,11.5 0 0 0 4.5,16 11.5,11.5 0 0 0 4.515625,16.201172 Z"
+     style="display:inline;fill:url(#linearGradient6);stroke-width:3.35573;fill-opacity:1"
+     id="path2" />
+  <path
+     d="M 16,1 A 15,15 0 0 0 4.9628906,5.8789062 L 7.0039062,7.3457031 A 12.5,12.5 0 0 1 16,3.5 12.5,12.5 0 0 1 28.5,16 12.5,12.5 0 0 1 16,28.5 12.5,12.5 0 0 1 5.84375,23.277344 h -0.058594 v -0.0957 A 12.5,12.5 0 0 1 4.34375,20.421875 l -2.375,0.771484 A 15,15 0 0 0 16,31 15,15 0 0 0 31,16 15,15 0 0 0 16,1 Z"
+     style="baseline-shift:baseline;display:inline;overflow:visible;vector-effect:none;fill:url(#linearGradient4);enable-background:accumulate;stop-color:#000000;stop-opacity:1;fill-opacity:1"
+     id="path1" />
+</svg>

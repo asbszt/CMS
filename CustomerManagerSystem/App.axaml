@@ -11,7 +11,9 @@
         <ResourceDictionary>
             <local:ServiceLocator x:Key="ServiceLocator" />
         </ResourceDictionary>
+        <SolidColorBrush x:Key="PrimaryBackGrand">#14172D</SolidColorBrush>
     </Application.Resources>
+    
     <Application.DataTemplates>
         <local:ViewLocator />
     </Application.DataTemplates>
@@ -19,5 +21,6 @@
     <Application.Styles>
         <semi:SemiTheme Locale="zh-CN" />
         <u-semi:SemiTheme Locale="zh-CN" />
+        <StyleInclude Source="Styles/AppDefaultStyles.axaml"></StyleInclude>
     </Application.Styles>
 </Application>

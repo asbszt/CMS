@@ -122,3 +122,10 @@
 /home/asbszt/RiderProjects/CustomerManagerSystem/CustomerManagerSystem/bin/Debug/net8.0/Irihi.Avalonia.Shared.Contracts.dll
 /home/asbszt/RiderProjects/CustomerManagerSystem/CustomerManagerSystem/bin/Debug/net8.0/Ursa.dll
 /home/asbszt/RiderProjects/CustomerManagerSystem/CustomerManagerSystem/bin/Debug/net8.0/Ursa.Themes.Semi.dll
+/home/asbszt/RiderProjects/CustomerManagerSystem/CustomerManagerSystem/bin/Debug/net8.0/Avalonia.Svg.Skia.dll
+/home/asbszt/RiderProjects/CustomerManagerSystem/CustomerManagerSystem/bin/Debug/net8.0/ExCSS.dll
+/home/asbszt/RiderProjects/CustomerManagerSystem/CustomerManagerSystem/bin/Debug/net8.0/ShimSkiaSharp.dll
+/home/asbszt/RiderProjects/CustomerManagerSystem/CustomerManagerSystem/bin/Debug/net8.0/SkiaSharp.HarfBuzz.dll
+/home/asbszt/RiderProjects/CustomerManagerSystem/CustomerManagerSystem/bin/Debug/net8.0/Svg.Custom.dll
+/home/asbszt/RiderProjects/CustomerManagerSystem/CustomerManagerSystem/bin/Debug/net8.0/Svg.Model.dll
+/home/asbszt/RiderProjects/CustomerManagerSystem/CustomerManagerSystem/bin/Debug/net8.0/Svg.Skia.dll

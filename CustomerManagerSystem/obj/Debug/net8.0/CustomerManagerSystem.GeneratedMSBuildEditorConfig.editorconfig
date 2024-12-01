@@ -22,6 +22,12 @@ build_property.EnableGeneratedComInterfaceComImportInterop =
 [/home/asbszt/RiderProjects/CustomerManagerSystem/CustomerManagerSystem/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[/home/asbszt/RiderProjects/CustomerManagerSystem/CustomerManagerSystem/Styles/AppDefaultStyles.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/asbszt/RiderProjects/CustomerManagerSystem/CustomerManagerSystem/Views/InitializationView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [/home/asbszt/RiderProjects/CustomerManagerSystem/CustomerManagerSystem/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

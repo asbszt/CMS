@@ -11,7 +11,7 @@
         Icon="/Assets/avalonia-logo.ico"
         Title="CustomerManagerSystem"
         DataContext="{Binding MainWindowViewModel,Source={StaticResource ServiceLocator}}"
-        Content="{Binding Content}">
+        > 
 
     <!--通过行为关联时间来绑定命令-->
     <i:Interaction.Behaviors>
@@ -19,4 +19,13 @@
             <ia:InvokeCommandAction Command="{Binding}" />
         </ia:EventTriggerBehavior>
     </i:Interaction.Behaviors>
+    <Grid ColumnDefinitions="200,*" Background="{DynamicResource PrimaryBackGrand}">
+        <Border Padding="20">
+            <Grid RowDefinitions="*,Auto">
+                <StackPanel>
+                    <Svg Path="/Assets/logo.svg" Width="100"></Svg>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
 </Window>
