@@ -11,14 +11,14 @@
             <RowDefinition Height="150" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <StackPanel Background="Purple">
-            <Image Source="/Assets/SettingTitle.png"></Image>
-            
+        <StackPanel Background="Purple" HorizontalAlignment="Stretch">
+            <Svg Path="/Assets/SettingTitle.svg" Height="150" HorizontalAlignment="Stretch" />
+
         </StackPanel>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
         </Grid>
 

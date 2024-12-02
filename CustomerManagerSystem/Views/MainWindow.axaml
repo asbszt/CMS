@@ -23,11 +23,11 @@
             <Grid RowDefinitions="*,Auto">
                 <StackPanel Spacing="12">
                     <Svg Path="/Assets/Title.svg" Width="200" />
-                    <Button Content="首页" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch" />
-                    <Button Content="客户资料" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch" />
-                    <Button Content="商品资料" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch" />
-                    <Button Content="基础业务" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch" />
-                    <Button Content="数据中心" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch" />
+                    <Button Content="首页" HorizontalAlignment="Stretch" />
+                    <Button Content="客户资料" HorizontalAlignment="Stretch" />
+                    <Button Content="商品资料" HorizontalAlignment="Stretch" />
+                    <Button Content="基础业务" HorizontalAlignment="Stretch" />
+                    <Button Content="数据中心" HorizontalAlignment="Stretch" />
                 </StackPanel>
                 <Button Grid.Row="1" Height="50" HorizontalAlignment="Left">
                     <Svg Path="/Assets/Setting.svg" />
