@@ -8,10 +8,9 @@
         mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="600"
         x:Class="CustomerManagerSystem.Views.MainWindow"
         x:DataType="viewModels:MainWindowViewModel"
-        Icon="/Assets/avalonia-logo.ico"
+        Icon="/Assets/Icon.ico"
         Title="CustomerManagerSystem"
-        DataContext="{Binding MainWindowViewModel,Source={StaticResource ServiceLocator}}"
-        > 
+        DataContext="{Binding MainWindowViewModel,Source={StaticResource ServiceLocator}}">
 
     <!--通过行为关联时间来绑定命令-->
     <i:Interaction.Behaviors>
@@ -23,14 +22,16 @@
         <Border Padding="20" Background="{DynamicResource PrimaryBackgrandGradient}">
             <Grid RowDefinitions="*,Auto">
                 <StackPanel Spacing="12">
-                    <Svg Path="/Assets/title.svg" Width="200"></Svg>
-                    <Button Content="首页" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch"></Button>
-                    <Button Content="客户资料" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch"></Button>
-                    <Button Content="商品资料" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch"></Button>
-                    <Button Content="基础业务" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch"></Button>
-                    <Button Content="数据中心" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch"></Button>
+                    <Svg Path="/Assets/Title.svg" Width="200" />
+                    <Button Content="首页" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch" />
+                    <Button Content="客户资料" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch" />
+                    <Button Content="商品资料" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch" />
+                    <Button Content="基础业务" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch" />
+                    <Button Content="数据中心" Foreground="White" Background="LightBlue" HorizontalAlignment="Stretch" />
                 </StackPanel>
-                <Button Grid.Row="1" Foreground="White" Background="LightBlue" ></Button>
+                <Button Grid.Row="1" Height="50" HorizontalAlignment="Left">
+                    <Svg Path="/Assets/Setting.svg" />
+                </Button>
             </Grid>
         </Border>
     </Grid>

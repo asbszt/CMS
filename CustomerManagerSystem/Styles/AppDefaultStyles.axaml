@@ -3,8 +3,10 @@
     <Design.PreviewWith>
         <Border Padding="20">
             <!-- Add Controls for Previewer Here -->
+            <Button />
         </Border>
     </Design.PreviewWith>
 
     <!-- Add Styles Here -->
+
 </Styles>
