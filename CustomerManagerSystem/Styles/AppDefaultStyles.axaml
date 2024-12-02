@@ -3,7 +3,18 @@
     <Design.PreviewWith>
         <Border Padding="20" Background="{DynamicResource PrimaryBackgrandGradient}" Width="200">
             <!-- Add Controls for Previewer Here -->
-            <Button Content="Hello World!" />
+            <StackPanel>
+                <Button HorizontalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Classes="icon" Content="&#xe2c2;" />
+                        <Label Content="首页" />
+                    </StackPanel>
+                </Button>
+                <Button>
+                    <Label Classes="icon-only" Content="&#xE270;" />
+                </Button>
+            </StackPanel>
+
         </Border>
     </Design.PreviewWith>
 
@@ -16,6 +27,14 @@
     <Style Selector="Button:pointerover /template/ ContentPresenter">
         <Setter Property="Foreground" Value="{DynamicResource PrimaryHoverForeground}" />
         <Setter Property="Background" Value="{DynamicResource PrimaryHoverBackgrand}" />
+    </Style>
+    <!-- fix the PhosphorFillFont location-->
+    <Style Selector="Label.icon">
+        <Setter Property="FontFamily" Value="{DynamicResource PhosphorFill}" />
+        <Setter Property="Margin" Value="0,6,4,0" />
+    </Style>
+    <Style Selector="Label.icon-only">
+        <Setter Property="FontFamily" Value="{DynamicResource PhosphorFill}" />
     </Style>
 
 </Styles>

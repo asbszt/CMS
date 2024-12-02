@@ -23,14 +23,39 @@
             <Grid RowDefinitions="*,Auto">
                 <StackPanel Spacing="12">
                     <Svg Path="/Assets/Title.svg" Width="200" />
-                    <Button Content="首页" HorizontalAlignment="Stretch" />
-                    <Button Content="客户资料" HorizontalAlignment="Stretch" />
-                    <Button Content="商品资料" HorizontalAlignment="Stretch" />
-                    <Button Content="基础业务" HorizontalAlignment="Stretch" />
-                    <Button Content="数据中心" HorizontalAlignment="Stretch" />
+                    <Button HorizontalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Classes="icon" Content="&#xe2c2;" />
+                            <Label Content="首页" />
+                        </StackPanel>
+                    </Button>
+                    <Button HorizontalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Classes="icon" Content="&#xE6F8;" />
+                            <Label Content="客户资料" />
+                        </StackPanel>
+                    </Button>
+                    <Button HorizontalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Classes="icon" Content="&#xE0B0;" />
+                            <Label Content="商品资料" />
+                        </StackPanel>
+                    </Button>
+                    <Button HorizontalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Classes="icon" Content="&#xE5B2;" />
+                            <Label Content="基础业务" />
+                        </StackPanel>
+                    </Button>
+                    <Button HorizontalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Classes="icon" Content="&#xE50E;" />
+                            <Label Content="数据中心" />
+                        </StackPanel>
+                    </Button>
                 </StackPanel>
-                <Button Grid.Row="1" Height="50" HorizontalAlignment="Left">
-                    <Svg Path="/Assets/Setting.svg" />
+                <Button Grid.Row="1">
+                    <Label Classes="icon-only" Content="&#xE270;" />
                 </Button>
             </Grid>
         </Border>
