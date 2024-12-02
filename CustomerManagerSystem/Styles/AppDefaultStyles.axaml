@@ -10,7 +10,22 @@
                         <Label Content="首页" />
                     </StackPanel>
                 </Button>
-                <Button>
+                <Button HorizontalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Classes="icon" Content="&#xe2c2;" />
+                        <Label Content="首页" />
+                    </StackPanel>
+                </Button>
+                <Button Classes="transparent" HorizontalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Classes="icon" Content="&#xe2c2;" />
+                        <Label Content="首页" />
+                    </StackPanel>
+                </Button>
+                <Button Classes="transparent">
+                    <Label Classes="icon-only" Content="&#xE270;" />
+                </Button>
+                <Button Classes="transparent">
                     <Label Classes="icon-only" Content="&#xE270;" />
                 </Button>
             </StackPanel>
@@ -19,11 +34,28 @@
     </Design.PreviewWith>
 
     <!-- Add Styles Here -->
+    <!--默认按钮样式-->
     <Style Selector="Button">
         <Setter Property="FontSize" Value="20" />
         <Setter Property="Foreground" Value="{DynamicResource PrimaryText}" />
         <Setter Property="Background" Value="{DynamicResource PrimaryBackgrand}" />
     </Style>
+    <!--默认按钮内部动画-->
+    <Style Selector="Button /template/ ContentPresenter">
+
+        <Setter Property="Transitions">
+            <Transitions>
+                <BrushTransition Property="Background" Duration="0:0:0.1" />
+                <BrushTransition Property="Background" Duration="0:0:0.1" />
+                <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.1" />
+            </Transitions>
+        </Setter>
+    </Style>
+    <!--transparent按钮、lable默认签鼠标划过放大-->
+    <Style Selector="Button.transparent:pointerover Label">
+        <Setter Property="RenderTransform" Value="scale(1.2,1.2)" />
+    </Style>
+    <!--默认按钮   鼠标滑过效果-->
     <Style Selector="Button:pointerover /template/ ContentPresenter">
         <Setter Property="Foreground" Value="{DynamicResource PrimaryHoverForeground}" />
         <Setter Property="Background" Value="{DynamicResource PrimaryHoverBackgrand}" />
@@ -35,6 +67,14 @@
     </Style>
     <Style Selector="Label.icon-only">
         <Setter Property="FontFamily" Value="{DynamicResource PhosphorFill}" />
+    </Style>
+    <!--transparent按钮样式-->
+    <Style Selector="Button.transparent">
+        <Setter Property="Background" Value="Transparent" />
+    </Style>
+    <!--transparent鼠标划过内部效果-->
+    <Style Selector="Button.transparent:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="Transparent" />
     </Style>
 
 </Styles>
