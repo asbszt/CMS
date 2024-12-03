@@ -1,8 +1,9 @@
+using Cms.Library.IServices;
 using CommunityToolkit.Mvvm.Input;
 
 namespace Cms.Library.ViewModels;
 
-public class MainWindowViewModel : ViewModelBase
+public class MainWindowViewModel(IAlertService alertService) : ViewModelBase
 {
     private ViewModelBase _content;
     private bool _sideMenuExpanded = true;
@@ -22,7 +23,7 @@ public class MainWindowViewModel : ViewModelBase
 
     public async Task AlertCommandAsync()
     {
-        // await alertService.AlertAsync("Info", "Message!");
+        await alertService.AlertAsync("Info", "Message!");
     }
 
     [RelayCommand]

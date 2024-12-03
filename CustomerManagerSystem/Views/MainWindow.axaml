@@ -15,14 +15,21 @@
     <!--通过行为关联时间来绑定命令-->
     <i:Interaction.Behaviors>
         <ia:EventTriggerBehavior EventName="Initialized">
-            <ia:InvokeCommandAction Command="{Binding}" />
+            <ia:InvokeCommandAction Command="{Binding }" />
         </ia:EventTriggerBehavior>
     </i:Interaction.Behaviors>
+
     <Grid ColumnDefinitions="Auto,*" Background="{DynamicResource PrimaryBackgrand}">
         <Border Padding="20" Background="{DynamicResource PrimaryBackgrandGradient}">
+            <!--左边侧边栏-->
             <Grid RowDefinitions="*,Auto">
-                <StackPanel Spacing="12" >
-
+                <StackPanel Spacing="12">
+                    <!--绑定点击事件-->
+                    <i:Interaction.Behaviors>
+                        <ia:EventTriggerBehavior EventName="PointerPressed">
+                            <ia:InvokeCommandAction Command="{Binding SideMenuCommand}" />
+                        </ia:EventTriggerBehavior>
+                    </i:Interaction.Behaviors>
                     <Svg Path="/Assets/Title.svg" Width="200" IsVisible="{Binding SideMenuExpanded}" />
                     <Svg Path="/Assets/Logo.svg" Width="20" IsVisible="{Binding !SideMenuExpanded}" />
                     <Button HorizontalAlignment="Stretch">
