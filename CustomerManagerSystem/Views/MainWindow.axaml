@@ -20,7 +20,8 @@
     </i:Interaction.Behaviors>
 
     <Grid ColumnDefinitions="Auto,*" Background="{DynamicResource PrimaryBackgrand}">
-        <Border Padding="20" Background="{DynamicResource PrimaryBackgrandGradient}">
+        <Border Padding="20" Background="{DynamicResource PrimaryBackgrandGradient}"
+                Width="{Binding BorderWidth}">
             <!--左边侧边栏-->
             <Grid RowDefinitions="*,Auto">
                 <StackPanel Spacing="12">

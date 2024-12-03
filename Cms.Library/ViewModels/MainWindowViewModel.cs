@@ -6,12 +6,21 @@ namespace Cms.Library.ViewModels;
 public class MainWindowViewModel(IAlertService alertService) : ViewModelBase
 {
     private ViewModelBase _content;
+
     private bool _sideMenuExpanded = true;
+
+    public int BorderWidth => _sideMenuExpanded ? 220 : 50;
+
 
     public bool SideMenuExpanded
     {
         get => _sideMenuExpanded;
-        set => SetProperty(ref _sideMenuExpanded, value);
+        set
+        {
+            SetProperty(ref _sideMenuExpanded, value);
+            //通知其他属性
+            OnPropertyChanged(nameof(BorderWidth));
+        }
     }
 
     public ViewModelBase Content
