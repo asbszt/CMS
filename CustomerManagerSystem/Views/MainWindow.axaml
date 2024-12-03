@@ -21,36 +21,38 @@
     <Grid ColumnDefinitions="Auto,*" Background="{DynamicResource PrimaryBackgrand}">
         <Border Padding="20" Background="{DynamicResource PrimaryBackgrandGradient}">
             <Grid RowDefinitions="*,Auto">
-                <StackPanel Spacing="12">
-                    <Svg Path="/Assets/Title.svg" Width="200" />
+                <StackPanel Spacing="12" >
+
+                    <Svg Path="/Assets/Title.svg" Width="200" IsVisible="{Binding SideMenuExpanded}" />
+                    <Svg Path="/Assets/Logo.svg" Width="20" IsVisible="{Binding !SideMenuExpanded}" />
                     <Button HorizontalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal">
                             <Label Classes="icon" Content="&#xe2c2;" />
-                            <Label Content="首页" />
+                            <Label Content="首页" IsVisible="{Binding SideMenuExpanded}" />
                         </StackPanel>
                     </Button>
                     <Button HorizontalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal">
                             <Label Classes="icon" Content="&#xE6F8;" />
-                            <Label Content="客户资料" />
+                            <Label Content="客户资料" IsVisible="{Binding SideMenuExpanded}" />
                         </StackPanel>
                     </Button>
                     <Button HorizontalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal">
                             <Label Classes="icon" Content="&#xE0B0;" />
-                            <Label Content="商品资料" />
+                            <Label Content="商品资料" IsVisible="{Binding SideMenuExpanded}" />
                         </StackPanel>
                     </Button>
                     <Button HorizontalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal">
                             <Label Classes="icon" Content="&#xE5B2;" />
-                            <Label Content="基础业务" />
+                            <Label Content="基础业务" IsVisible="{Binding SideMenuExpanded}" />
                         </StackPanel>
                     </Button>
                     <Button HorizontalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal">
                             <Label Classes="icon" Content="&#xE50E;" />
-                            <Label Content="数据中心" />
+                            <Label Content="数据中心" IsVisible="{Binding SideMenuExpanded}" />
                         </StackPanel>
                     </Button>
                 </StackPanel>
