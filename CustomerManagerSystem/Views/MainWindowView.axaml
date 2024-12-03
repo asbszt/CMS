@@ -6,7 +6,7 @@
         xmlns:i="using:Avalonia.Xaml.Interactivity"
         xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
         mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="600"
-        x:Class="CustomerManagerSystem.Views.MainWindow"
+        x:Class="CustomerManagerSystem.Views.MainWindowView"
         x:DataType="viewModels:MainWindowViewModel"
         Icon="/Assets/Icon.ico"
         Title="CustomerManagerSystem"
@@ -15,7 +15,7 @@
     <!--通过行为关联时间来绑定命令-->
     <i:Interaction.Behaviors>
         <ia:EventTriggerBehavior EventName="Initialized">
-            <ia:InvokeCommandAction Command="{Binding }" />
+            <ia:InvokeCommandAction Command="{Binding ToDo}" />
         </ia:EventTriggerBehavior>
     </i:Interaction.Behaviors>
 
@@ -33,7 +33,7 @@
                     </i:Interaction.Behaviors>
                     <Svg Path="/Assets/Title.svg" Width="200" IsVisible="{Binding SideMenuExpanded}" />
                     <Svg Path="/Assets/Logo.svg" Width="20" IsVisible="{Binding !SideMenuExpanded}" />
-                    <Button HorizontalAlignment="Stretch">
+                    <Button HorizontalAlignment="Stretch" Command="{Binding HomeCommand}">
                         <StackPanel Orientation="Horizontal">
                             <Label Classes="icon" Content="&#xe2c2;" />
                             <Label Content="首页" IsVisible="{Binding SideMenuExpanded}" />
@@ -64,10 +64,11 @@
                         </StackPanel>
                     </Button>
                 </StackPanel>
-                <Button Grid.Row="1" Classes="transparent">
+                <Button Grid.Row="1" Classes="transparent" Command="{Binding SettingCommand}">
                     <Label Classes="icon-only" Content="&#xE270;" />
                 </Button>
             </Grid>
         </Border>
+        <ContentControl Grid.Column="1" Content="{Binding CurrentPage}" />
     </Grid>
 </Window>

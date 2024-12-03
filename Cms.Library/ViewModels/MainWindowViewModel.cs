@@ -1,16 +1,28 @@
 using Cms.Library.IServices;
-using CommunityToolkit.Mvvm.Input;
 
 namespace Cms.Library.ViewModels;
 
-public class MainWindowViewModel(IAlertService alertService) : ViewModelBase
+public class MainWindowViewModel : ViewModelBase
 {
-    private ViewModelBase _content;
+    private readonly IAlertService _alertService;
+    private readonly InitializationViewModel _initializationViewModel;
+    private readonly IRootNavigationService _rootNavigationService;
+    private readonly SettingViewModel _settingViewModel;
+    private ViewModelBase _currentPage;
+
 
     private bool _sideMenuExpanded = true;
 
-    public int BorderWidth => _sideMenuExpanded ? 220 : 50;
+    public MainWindowViewModel(IAlertService alertService, IRootNavigationService rootNavigationService,
+        SettingViewModel settingViewModel, InitializationViewModel initializationViewModel)
+    {
+        _alertService = alertService;
+        _rootNavigationService = rootNavigationService;
+        _settingViewModel = settingViewModel;
+        _initializationViewModel = initializationViewModel;
+    }
 
+    public int BorderWidth => _sideMenuExpanded ? 220 : 85;
 
     public bool SideMenuExpanded
     {
@@ -23,21 +35,31 @@ public class MainWindowViewModel(IAlertService alertService) : ViewModelBase
         }
     }
 
-    public ViewModelBase Content
+    public ViewModelBase CurrentPage
     {
-        get => _content;
-        set => SetProperty(ref _content, value);
+        get => _currentPage;
+        set => SetProperty(ref _currentPage, value);
     }
 
 
     public async Task AlertCommandAsync()
     {
-        await alertService.AlertAsync("Info", "Message!");
+        await _alertService.AlertAsync("Info", "Message!");
     }
 
-    [RelayCommand]
+
     public void SideMenuCommand()
     {
         SideMenuExpanded = !_sideMenuExpanded;
+    }
+
+    public void SettingCommand()
+    {
+        CurrentPage = _settingViewModel;
+    }
+
+    public void HomeCommand()
+    {
+        CurrentPage = _initializationViewModel;
     }
 }

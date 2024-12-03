@@ -21,6 +21,8 @@ public class ServiceLocator
         serviceCollection.AddSingleton<SettingViewModel>();
         serviceCollection.AddSingleton<ISystemSettingService, SystemSettingService>();
         serviceCollection.AddSingleton<IAlertService, AlertService>();
+        serviceCollection.AddSingleton<IRootNavigationService, RootNavigationService>();
+        serviceCollection.AddSingleton<InitializationViewModel>();
         _serviceProvider = serviceCollection.BuildServiceProvider(); //注册服务给代理服务
     }
 
@@ -43,4 +45,5 @@ public class ServiceLocator
 
     public MainWindowViewModel MainWindowViewModel => _serviceProvider.GetService<MainWindowViewModel>();
     public SettingViewModel SettingViewModel => _serviceProvider.GetService<SettingViewModel>();
+    public InitializationViewModel InitializationViewModel => _serviceProvider.GetService<InitializationViewModel>();
 }

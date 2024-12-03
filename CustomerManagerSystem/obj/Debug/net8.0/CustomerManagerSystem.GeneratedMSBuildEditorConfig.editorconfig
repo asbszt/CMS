@@ -28,8 +28,8 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [/home/asbszt/RiderProjects/CustomerManagerSystem/CustomerManagerSystem/Views/InitializationView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/asbszt/RiderProjects/CustomerManagerSystem/CustomerManagerSystem/Views/MainWindow.axaml]
+[/home/asbszt/RiderProjects/CustomerManagerSystem/CustomerManagerSystem/Views/MainWindowView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/asbszt/RiderProjects/CustomerManagerSystem/CustomerManagerSystem/Views/Setting.axaml]
+[/home/asbszt/RiderProjects/CustomerManagerSystem/CustomerManagerSystem/Views/SettingView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
