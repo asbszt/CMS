@@ -25,6 +25,9 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [/home/asbszt/RiderProjects/CustomerManagerSystem/CustomerManagerSystem/Styles/AppDefaultStyles.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[/home/asbszt/RiderProjects/CustomerManagerSystem/CustomerManagerSystem/Views/HomeView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [/home/asbszt/RiderProjects/CustomerManagerSystem/CustomerManagerSystem/Views/InitializationView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

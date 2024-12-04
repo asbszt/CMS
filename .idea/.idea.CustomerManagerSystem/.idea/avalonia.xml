@@ -5,6 +5,7 @@
       <map>
         <entry key="CustomerManagerSystem/App.axaml" value="CustomerManagerSystem/CustomerManagerSystem.csproj" />
         <entry key="CustomerManagerSystem/Styles/AppDefaultStyles.axaml" value="CustomerManagerSystem/CustomerManagerSystem.csproj" />
+        <entry key="CustomerManagerSystem/Views/HomeView.axaml" value="CustomerManagerSystem/CustomerManagerSystem.csproj" />
         <entry key="CustomerManagerSystem/Views/InitializationView.axaml" value="CustomerManagerSystem/CustomerManagerSystem.csproj" />
         <entry key="CustomerManagerSystem/Views/MainWindow.axaml" value="CustomerManagerSystem/CustomerManagerSystem.csproj" />
         <entry key="CustomerManagerSystem/Views/MainWindowView.axaml" value="CustomerManagerSystem/CustomerManagerSystem.csproj" />

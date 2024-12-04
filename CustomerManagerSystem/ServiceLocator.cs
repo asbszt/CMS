@@ -19,6 +19,7 @@ public class ServiceLocator
         var serviceCollection = new ServiceCollection();
         serviceCollection.AddSingleton<MainWindowViewModel>();
         serviceCollection.AddSingleton<SettingViewModel>();
+        serviceCollection.AddSingleton<HomeViewModel>();
         serviceCollection.AddSingleton<ISystemSettingService, SystemSettingService>();
         serviceCollection.AddSingleton<IAlertService, AlertService>();
         serviceCollection.AddSingleton<IRootNavigationService, RootNavigationService>();
@@ -46,4 +47,5 @@ public class ServiceLocator
     public MainWindowViewModel MainWindowViewModel => _serviceProvider.GetService<MainWindowViewModel>();
     public SettingViewModel SettingViewModel => _serviceProvider.GetService<SettingViewModel>();
     public InitializationViewModel InitializationViewModel => _serviceProvider.GetService<InitializationViewModel>();
+    public HomeViewModel HomeViewModel => _serviceProvider.GetService<HomeViewModel>();
 }

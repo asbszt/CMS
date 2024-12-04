@@ -33,13 +33,15 @@
                     </i:Interaction.Behaviors>
                     <Svg Path="/Assets/Title.svg" Width="200" IsVisible="{Binding SideMenuExpanded}" />
                     <Svg Path="/Assets/Logo.svg" Width="20" IsVisible="{Binding !SideMenuExpanded}" />
-                    <Button HorizontalAlignment="Stretch" Command="{Binding HomeCommand}">
+                    <Button Classes.active="{Binding HomePageActive}" HorizontalAlignment="Stretch"
+                            Command="{Binding HomeCommand}">
                         <StackPanel Orientation="Horizontal">
                             <Label Classes="icon" Content="&#xe2c2;" />
                             <Label Content="首页" IsVisible="{Binding SideMenuExpanded}" />
                         </StackPanel>
                     </Button>
-                    <Button HorizontalAlignment="Stretch">
+                    <Button Classes.active="{Binding BasePageActive}" HorizontalAlignment="Stretch"
+                            Command="{Binding BaseCommand}">
                         <StackPanel Orientation="Horizontal">
                             <Label Classes="icon" Content="&#xE6F8;" />
                             <Label Content="客户资料" IsVisible="{Binding SideMenuExpanded}" />
