@@ -1,5 +1,6 @@
 using System;
 using Avalonia;
+using Cms.Library.Helper;
 using Cms.Library.IServices;
 using Cms.Library.Services;
 using Cms.Library.ViewModels;
@@ -24,6 +25,14 @@ public class ServiceLocator
         serviceCollection.AddSingleton<IAlertService, AlertService>();
         serviceCollection.AddSingleton<IRootNavigationService, RootNavigationService>();
         serviceCollection.AddSingleton<InitializationViewModel>();
+        serviceCollection.AddSingleton<PageFactory>();
+        serviceCollection.AddSingleton<Func<PageNames, PageModelBase>>(it => name => name switch
+        {
+            PageNames.Home => it.GetRequiredService<HomeViewModel>(),
+            PageNames.Settings => it.GetRequiredService<SettingViewModel>(),
+            PageNames.Initialization => it.GetRequiredService<InitializationViewModel>(),
+            _ => throw new NotImplementedException()
+        });
         _serviceProvider = serviceCollection.BuildServiceProvider(); //注册服务给代理服务
     }
 
@@ -43,9 +52,6 @@ public class ServiceLocator
             throw new NullReferenceException();
         }
     }
-
     public MainWindowViewModel MainWindowViewModel => _serviceProvider.GetService<MainWindowViewModel>();
-    public SettingViewModel SettingViewModel => _serviceProvider.GetService<SettingViewModel>();
-    public InitializationViewModel InitializationViewModel => _serviceProvider.GetService<InitializationViewModel>();
-    public HomeViewModel HomeViewModel => _serviceProvider.GetService<HomeViewModel>();
+
 }

@@ -1,34 +1,24 @@
+using Cms.Library.Helper;
 using Cms.Library.IServices;
 
 namespace Cms.Library.ViewModels;
 
-public class MainWindowViewModel : ViewModelBase
+public class MainWindowViewModel : PageModelBase
 {
+    private readonly PageFactory _pageFactory;
     private readonly IAlertService _alertService;
-    private readonly HomeViewModel _homeViewModel;
-    private readonly InitializationViewModel _initializationViewModel;
-    private readonly IRootNavigationService _rootNavigationService;
-    private readonly SettingViewModel _settingViewModel;
-    private ViewModelBase _currentPage;
-    private string _homeButtonClasses;
-
-
+    private PageModelBase _currentPage;
     private bool _sideMenuExpanded = true;
 
 
-    public MainWindowViewModel(IAlertService alertService, IRootNavigationService rootNavigationService,
-        SettingViewModel settingViewModel, InitializationViewModel initializationViewModel, HomeViewModel homeViewModel)
+    public MainWindowViewModel(PageFactory pageFactory, IAlertService alertService)
     {
+        _pageFactory = pageFactory;
         _alertService = alertService;
-        _rootNavigationService = rootNavigationService;
-        _settingViewModel = settingViewModel;
-        _initializationViewModel = initializationViewModel;
-        _homeViewModel = homeViewModel;
-        _currentPage = _homeViewModel;
     }
 
-    public bool HomePageActive => CurrentPage == _homeViewModel;
-    public bool BasePageActive => CurrentPage == _initializationViewModel;
+    public bool HomePageActive => CurrentPage.PageName == PageNames.Home;
+    public bool BasePageActive => CurrentPage.PageName == PageNames.Initialization;
 
     public int BorderWidth => _sideMenuExpanded ? 220 : 85;
 
@@ -43,7 +33,7 @@ public class MainWindowViewModel : ViewModelBase
         }
     }
 
-    public ViewModelBase CurrentPage
+    public PageModelBase CurrentPage
     {
         get => _currentPage;
         set
@@ -68,16 +58,16 @@ public class MainWindowViewModel : ViewModelBase
 
     public void SettingCommand()
     {
-        CurrentPage = _settingViewModel;
+        CurrentPage = _pageFactory.CreatePageViewModel(PageNames.Settings);
     }
 
     public void HomeCommand()
     {
-        CurrentPage = _homeViewModel;
+        CurrentPage = _pageFactory.CreatePageViewModel(PageNames.Home);
     }
 
     public void BaseCommand()
     {
-        CurrentPage = _initializationViewModel;
+        CurrentPage = _pageFactory.CreatePageViewModel(PageNames.Initialization);
     }
 }
