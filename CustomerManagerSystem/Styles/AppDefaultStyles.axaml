@@ -46,6 +46,7 @@
         <Setter Property="FontSize" Value="20" />
         <Setter Property="Foreground" Value="{DynamicResource PrimaryText}" />
         <Setter Property="Background" Value="{DynamicResource PrimaryBackgrand}" />
+        <Setter Property="CornerRadius" Value="10" />
     </Style>
     <!--默认按钮内部动画-->
     <Style Selector="Button /template/ ContentPresenter">

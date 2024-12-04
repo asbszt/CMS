@@ -5,8 +5,8 @@ namespace Cms.Library.ViewModels;
 
 public class MainWindowViewModel : PageModelBase
 {
-    private readonly PageFactory _pageFactory;
     private readonly IAlertService _alertService;
+    private readonly PageFactory _pageFactory;
     private PageModelBase _currentPage;
     private bool _sideMenuExpanded = true;
 
@@ -15,6 +15,7 @@ public class MainWindowViewModel : PageModelBase
     {
         _pageFactory = pageFactory;
         _alertService = alertService;
+        HomeCommand();
     }
 
     public bool HomePageActive => CurrentPage.PageName == PageNames.Home;
