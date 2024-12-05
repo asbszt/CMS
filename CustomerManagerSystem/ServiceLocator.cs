@@ -52,6 +52,7 @@ public class ServiceLocator
             throw new NullReferenceException();
         }
     }
-    public MainWindowViewModel MainWindowViewModel => _serviceProvider.GetService<MainWindowViewModel>();
 
+    public MainWindowViewModel MainWindowViewModel => _serviceProvider.GetService<MainWindowViewModel>();
+    public SettingViewModel SettingViewModel => _serviceProvider.GetService<SettingViewModel>();
 }

@@ -2,10 +2,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:viewModels="clr-namespace:Cms.Library.ViewModels;assembly=Cms.Library"
+             mc:Ignorable="d" d:DesignWidth="1100" d:DesignHeight="800"
              x:Class="CustomerManagerSystem.Views.SettingView"
              Background="{DynamicResource PrimaryBackgrand}"
              Foreground="{DynamicResource PrimaryForegrand}"
+             x:DataType="viewModels:MainWindowViewModel"
              DataContext="{Binding SettingViewModel,Source={StaticResource ServiceLocator}}">
 
     <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,*">
@@ -19,6 +21,73 @@
                 <Label HorizontalAlignment="Center" Content="CopyRight" />
             </StackPanel>
         </Grid>
+        <StackPanel Grid.Column="0" Grid.Row="1" Spacing="15" Margin="15">
+
+            <Label Content="General" />
+
+            <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto,Auto">
+                <TextBlock Classes="LabelAlignment"
+                           Text="It is a Licence for use Application,Use For What  xxxx   xxxxx    xxxxx   xxxxx  xxxxx   xxxxx  xxxxx"
+                           TextWrapping="Wrap" />
+                <Button Grid.Column="1" Grid.Row="0" HorizontalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Classes="icon" Content="&#xe2fe;" />
+                        <Label Content="设置" />
+                    </StackPanel>
+                </Button>
+                <TextBlock Grid.Column="0" Grid.Row="1" Classes="LabelAlignment"
+                           Text="It is a Licence for use Application,Use For What xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+                           TextWrapping="Wrap" />
+                <CheckBox Grid.Column="1" Grid.Row="1" Content="设置" />
+                <TextBlock Grid.Column="0" Grid.Row="2" Classes="LabelAlignment"
+                           Text="It is a Licence for use Application,Use For What xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+                           TextWrapping="Wrap" />
+                <CheckBox Grid.Column="1" Grid.Row="2" Content="设置" />
+            </Grid>
+            <StackPanel Spacing="15">
+                <Label Content="Location" />
+                <Grid ColumnDefinitions="* ,Auto">
+                    <StackPanel>
+                        <TextBlock Classes="LabelAlignment" Text="Add some path in here" />
+                        <TextBlock Classes="LabelAlignment" Text="Add some path in here" />
+                        <TextBlock Classes="LabelAlignment" Text="Add some path in here" />
+                    </StackPanel>
+                    <Button Grid.Column="1">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Classes="icon" Content="&#xe56e;" />
+                            <Label Content="路径" />
+                        </StackPanel>
+                    </Button>
+                </Grid>
+                <ListBox ItemsSource="{Binding DefaultPath}" />
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1" Spacing="15" Margin="15">
+            <StackPanel>
+                <Label Content="Host" />
+                <TextBlock Classes="LabelAlignment">
+                    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<LineBreak />
+                    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<LineBreak />
+                    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<LineBreak />
+                </TextBlock>
+                <ComboBox />
+                <Label Content="TestLable" />
+            </StackPanel>
+            <StackPanel Spacing="15">
+                <Label Content="TmpSetting" />
+                <TextBlock Classes="LabelAlignment">
+                    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<LineBreak />
+                    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<LineBreak />
+                    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<LineBreak />
+                </TextBlock>
+                <Grid ColumnDefinitions="*,*,*">
+                    <ComboBox HorizontalAlignment="Stretch" />
+                    <TextBox Grid.Column="1" />
+                    <TextBox Grid.Column="2" />
+                </Grid>
+
+            </StackPanel>
+        </StackPanel>
 
     </Grid>
 

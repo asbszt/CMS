@@ -88,5 +88,9 @@
         <Setter Property="Foreground" Value="{DynamicResource PrimaryHoverForeground}" />
         <Setter Property="Background" Value="{DynamicResource PrimaryActiveBackgrand}" />
     </Style>
+    <!--TextBlock alignment Lable-->
+    <Style Selector="TextBlock.LabelAlignment">
+        <Setter Property="Margin" Value="2,0,0,0" />
+    </Style>
 
 </Styles>
