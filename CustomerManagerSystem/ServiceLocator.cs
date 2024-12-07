@@ -55,4 +55,6 @@ public class ServiceLocator
 
     public MainWindowViewModel MainWindowViewModel => _serviceProvider.GetService<MainWindowViewModel>();
     public SettingViewModel SettingViewModel => _serviceProvider.GetService<SettingViewModel>();
+    public HomeViewModel HomeViewModel => _serviceProvider.GetService<HomeViewModel>();
+    public InitializationViewModel InitializationViewModel => _serviceProvider.GetService<InitializationViewModel>();
 }

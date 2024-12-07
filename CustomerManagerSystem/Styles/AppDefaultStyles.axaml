@@ -84,6 +84,7 @@
     <Style Selector="Button.transparent:pointerover /template/ ContentPresenter">
         <Setter Property="Background" Value="Transparent" />
     </Style>
+    <!--Button Active -->
     <Style Selector="Button.active /template/ ContentPresenter">
         <Setter Property="Foreground" Value="{DynamicResource PrimaryHoverForeground}" />
         <Setter Property="Background" Value="{DynamicResource PrimaryActiveBackgrand}" />

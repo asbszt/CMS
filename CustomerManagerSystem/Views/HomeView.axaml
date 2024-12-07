@@ -4,6 +4,19 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="CustomerManagerSystem.Views.HomeView"
-             DataContext="{Binding HomeViewModel,Source={StaticResource ServiceLocator}}">
-    <Label> Home Page</Label>
+             DataContext="{Binding HomeViewModel,Source={StaticResource ServiceLocator}}"
+             Background="{DynamicResource PrimaryBackgrand}"
+             Foreground="{DynamicResource PrimaryForegrand}">
+    <Grid RowDefinitions="* *">
+        <Grid Grid.ColumnDefinitions="*,*,*" HorizontalAlignment="Stretch" Height="300" Margin="20,20,20,20">
+            <Button Command="{Binding AlertCommand}" Content="Customer" Margin="0,0,20,0" HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch" />
+            <Button Grid.Column="1" Command="{Binding AlertCommand}" Content="Customer" Margin="0,0,20,0"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch" />
+            <Button Grid.Column="2" Command="{Binding AlertCommand}" Content="Customer" HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch" />
+        </Grid>
+    </Grid>
+
 </UserControl>
