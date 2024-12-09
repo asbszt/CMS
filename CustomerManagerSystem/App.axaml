@@ -19,6 +19,9 @@
         <SolidColorBrush x:Key="PrimaryHoverBackgrand">#333B5A</SolidColorBrush>
         <SolidColorBrush x:Key="PrimaryHoverForeground">White</SolidColorBrush>
         <SolidColorBrush x:Key="PrimaryActiveBackgrand">#6633dd</SolidColorBrush>
+        <SolidColorBrush x:Key="PrimarCardBackgrandFirst">#6633dd</SolidColorBrush>
+        <SolidColorBrush x:Key="PrimarCardBackgrandSecond">DeepSkyBlue</SolidColorBrush>
+
         <FontFamily x:Key="PhosphorFill">/Assets/Fonts/Phosphor-Fill.ttf#Phosphor-Fill</FontFamily>
     </Application.Resources>
 

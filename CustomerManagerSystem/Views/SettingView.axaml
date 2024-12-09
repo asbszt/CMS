@@ -38,11 +38,11 @@
                 <TextBlock Grid.Column="0" Grid.Row="1" Classes="LabelAlignment"
                            Text="It is a Licence for use Application,Use For What xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
                            TextWrapping="Wrap" />
-                <CheckBox Grid.Column="1" Grid.Row="1" Content="设置" />
+                <CheckBox Grid.Column="1" Grid.Row="1" Foreground="{DynamicResource PrimaryForegrand}" Content="设置" />
                 <TextBlock Grid.Column="0" Grid.Row="2" Classes="LabelAlignment"
                            Text="It is a Licence for use Application,Use For What xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
                            TextWrapping="Wrap" />
-                <CheckBox Grid.Column="1" Grid.Row="2" Content="设置" />
+                <CheckBox Grid.Column="1" Grid.Row="2" Foreground="{DynamicResource PrimaryForegrand}" Content="设置" />
             </Grid>
             <StackPanel Spacing="15">
                 <Label Content="Location" />
