@@ -93,5 +93,4 @@
     <Style Selector="TextBlock.LabelAlignment">
         <Setter Property="Margin" Value="2,0,0,0" />
     </Style>
-
 </Styles>
