@@ -1,5 +1,6 @@
 <Styles xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:u="https://irihi.tech/ursa">
     <Design.PreviewWith>
         <Border Background="{DynamicResource PrimaryBackgrandGradient}" Width="200">
             <!-- Add Controls for Previewer Here -->
@@ -28,6 +29,7 @@
                 <Button Classes="transparent">
                     <Label Classes="icon-only" Content="&#xE270;" />
                 </Button>
+                <u:IconButton Content="HelloWorld" />
             </StackPanel>
 
         </Border>
